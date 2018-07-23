@@ -25,5 +25,17 @@ def test_get_cohort
 end
 
 # Add in Setter methods to update the students name and what cohort they are in.
+#Setter tests, to check that attr_accessor is functioning correctly.
+
+def test_set_name
+  @student1.name = "Douglas"
+  assert_equal("Douglas", @student1.name)
+end
+
+def test_set_cohort
+  @student1.cohort = "E15"
+  assert_equal("E15", @student1.cohort)
+end
+
 
 end
