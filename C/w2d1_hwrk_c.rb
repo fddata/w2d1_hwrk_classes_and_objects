@@ -9,6 +9,10 @@ class Library
     @books = books
   end
 
+  def get_info(name)
+    @books.select {|book| book[:title] == name }[0]
+  end
+
 
 
 

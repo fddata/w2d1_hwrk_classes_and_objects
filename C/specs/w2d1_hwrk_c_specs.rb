@@ -36,8 +36,12 @@ class LibraryTest < MiniTest::Test
  end
 
 #Create a method that takes in a book title and returns all of the information about that book.
-# def test_get_info
-#
+ def test_get_info
+
+   result = @books1.get_info("the_two_towers")
+   assert_equal(2, result.length)
+ end
+
 #   result = @books1.get_info("the_two_towers")
 #   assert_equal(4, result.size)
 # end
