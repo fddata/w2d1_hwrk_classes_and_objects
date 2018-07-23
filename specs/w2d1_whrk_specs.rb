@@ -44,5 +44,13 @@ def test_talk
   assert_equal("I can talk!", result)
 end
 
+# Create a method that takes in a students favourite programming language and returns it as part of a string (eg. student1.say_favourite_language("Ruby") -> "I love Ruby").
+
+def test_fav_language
+  result = @student1.say_favourite_language("Ruby")
+  assert_equal("I love Ruby", result)
+end
+
+
 
 end
