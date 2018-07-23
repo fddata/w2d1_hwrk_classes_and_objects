@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/rg'
-require_relative '../w2d1_hwrk.rb'
+require_relative '../w2d1_hwrk_a.rb'
 
 class TestStudent < MiniTest::Test
 
@@ -50,6 +50,8 @@ def test_fav_language
   result = @student1.say_favourite_language("Ruby")
   assert_equal("I love Ruby", result)
 end
+
+
 
 
 
