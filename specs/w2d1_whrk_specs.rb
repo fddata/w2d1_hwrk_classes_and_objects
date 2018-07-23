@@ -37,5 +37,12 @@ def test_set_cohort
   assert_equal("E15", @student1.cohort)
 end
 
+# Create a method that gets the student to talk (eg. Returns "I can talk!).
+
+def test_talk
+  result = @student1.talk
+  assert_equal("I can talk!", result)
+end
+
 
 end
