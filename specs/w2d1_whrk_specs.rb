@@ -9,13 +9,21 @@ class TestStudent < MiniTest::Test
 
   end
 
+
+# Create a couple of Getter methods, one that returns the name property and one that returns the cohort property of the student.
 #Getter tests - testing attr_accessor has initialised correctly
+
 
 def test_get_name
     result = @student1.name
     assert_equal("Fraser", result)
 end
 
+def test_get_cohort
+  result = @student1.cohort
+    assert_equal("G7", result)
+end
 
+# Add in Setter methods to update the students name and what cohort they are in.
 
 end
