@@ -5,24 +5,53 @@ class Library
 
   attr_accessor :books
 
-  def initialize(books)
-    @books = books
+  def initialize()
+    @books = []
   end
 
-  def get_info(name)
-    @books.select {|book| book[:title] == name }[0]
-  end
+#
+def add_book(book)
+  @books.push(book)
+end
 
-  def get_rental_details(name)
-    return get_info(name)[:rental_details]
+def find_by_title(title)
+@books.select {|book| book[:title] == title }[0]
+#add [0] to return the hash, rather than the array of 1 hash. can also use the for loop
 
-  end
+  # for book in @books
+  #   if book[:title] == title
+  #     return book
+  #   end
+  # end
+end
 
- def add_book(new_book)
-   @books.push(new_book)
- end
+def get_rental_details(title)
+  #uses previous function and returns only rental details.
+  return find_by_title(title)[:rental_details]
+  #can also use a for loop
+  # for book in @books
+  #   if book[:title] == title
+  #     return book[:rental_details]
+  #   end
+  # end
+end
 
+def add_book_by_title(name_of_book)
+  book = {title: name_of_book,
+    rental_details: {
+      student_name: "",
+      date: "",
+      }}
+
+      add_book(book)
+
+    end
+
+def change_rental_details(name_of_book, student_name, new_date)
+  book = find_by_title(name_of_book)
+  book[:rental_details][:student_name] = student_name
+  book[:rental_details][:date] = new_date
 end
 
 
-# Create a method that changes the rental details of a book by taking in the title of the book, the student renting it and the date it's due to be returned.
+end
